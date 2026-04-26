@@ -240,39 +240,43 @@ width: 100%;
 max-width: 1100px;
 }
 .place-card {
-position: relative;
-height: 320px;
 overflow: hidden;
 cursor: pointer;
+display: flex;
+flex-direction: column;
+background: var(–navy);
 }
-.place-card:first-child { grid-row: span 2; height: 100%; }
+.place-card:first-child { grid-row: span 2; }
+.place-card .img-wrap {
+height: 200px;
+overflow: hidden;
+flex-shrink: 0;
+}
+.place-card:first-child .img-wrap { height: 100%; min-height: 280px; }
 .place-card img {
 width: 100%; height: 100%;
 object-fit: cover;
 transition: transform 0.6s ease;
-filter: brightness(0.55);
+filter: brightness(0.95);
 }
-.place-card:hover img { transform: scale(1.05); filter: brightness(0.7); }
+.place-card:hover img { transform: scale(1.04); filter: brightness(1); }
 .place-card .overlay {
-position: absolute; inset: 0;
-background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.15) 100%);
+padding: 18px 20px 22px;
 display: flex;
 flex-direction: column;
-justify-content: flex-end;
-padding: 28px;
+background: var(–navy);
 }
-.place-card h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 32px; letter-spacing: 1px; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
-.place-card p { font-size: 13px; font-weight: 400; opacity: 1; margin-top: 6px; line-height: 1.5; text-shadow: 0 1px 4px rgba(0,0,0,0.9); }
+.place-card h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 26px; letter-spacing: 1px; color: var(–cream); margin-top: 4px; }
+.place-card p { font-size: 12px; font-weight: 300; color: rgba(245,240,232,0.75); margin-top: 6px; line-height: 1.5; }
 .place-card .badge {
-position: absolute;
-top: 16px; left: 16px;
+display: inline-block;
+align-self: flex-start;
 background: var(–terracotta);
-font-size: 10px;
+font-size: 9px;
 letter-spacing: 2px;
 text-transform: uppercase;
-padding: 6px 14px;
+padding: 4px 10px;
 font-weight: 700;
-box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 /* SLIDE 5 — BEER */
@@ -611,7 +615,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
   <h2 class="reveal">But there's<br>more than<br>just Prague.</h2>
   <div class="places-grid reveal">
     <div class="place-card">
-      <img src="images/IMG_9025.jpeg" alt="Český Krumlov">
+      <div class="img-wrap"><img src="images/IMG_9025.jpeg" alt="Český Krumlov"></div>
       <div class="overlay">
         <div class="badge">UNESCO</div>
         <h3>Český Krumlov</h3>
@@ -619,7 +623,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
       </div>
     </div>
     <div class="place-card">
-      <img src="images/IMG_9028.jpeg" alt="Kutná Hora">
+      <div class="img-wrap"><img src="images/IMG_9028.jpeg" alt="Kutná Hora"></div>
       <div class="overlay">
         <div class="badge">💀 Unique</div>
         <h3>Kutná Hora</h3>
@@ -627,7 +631,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
       </div>
     </div>
     <div class="place-card">
-      <img src="images/IMG_9029.jpeg" alt="Olomouc">
+      <div class="img-wrap"><img src="images/IMG_9029.jpeg" alt="Olomouc"></div>
       <div class="overlay">
         <div class="badge">Underrated</div>
         <h3>Olomouc</h3>
@@ -635,7 +639,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
       </div>
     </div>
     <div class="place-card">
-      <img src="images/IMG_9030.webp" alt="Karlovy Vary">
+      <div class="img-wrap"><img src="images/IMG_9030.webp" alt="Karlovy Vary"></div>
       <div class="overlay">
         <div class="badge">🎬 Film Festival</div>
         <h3>Karlovy Vary</h3>
