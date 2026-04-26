@@ -201,13 +201,14 @@ margin-bottom: 32px;
 .detail-list { list-style: none; }
 .detail-list li {
 padding: 16px 0;
-border-bottom: 1px solid rgba(255,255,255,0.08);
+border-bottom: 1px solid rgba(255,255,255,0.1);
 font-size: 14px;
-font-weight: 300;
+font-weight: 400;
 line-height: 1.6;
 display: flex;
 gap: 16px;
 align-items: flex-start;
+opacity: 1;
 }
 .detail-list li .icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
 .fun-pill {
@@ -249,19 +250,19 @@ cursor: pointer;
 width: 100%; height: 100%;
 object-fit: cover;
 transition: transform 0.6s ease;
-filter: brightness(0.7);
+filter: brightness(0.55);
 }
-.place-card:hover img { transform: scale(1.05); filter: brightness(0.9); }
+.place-card:hover img { transform: scale(1.05); filter: brightness(0.7); }
 .place-card .overlay {
 position: absolute; inset: 0;
-background: linear-gradient(to top, rgba(15,25,35,0.95) 0%, transparent 50%);
+background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.15) 100%);
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
-padding: 24px;
+padding: 28px;
 }
-.place-card h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 28px; letter-spacing: 1px; }
-.place-card p { font-size: 12px; font-weight: 300; opacity: 0.7; margin-top: 4px; }
+.place-card h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 32px; letter-spacing: 1px; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
+.place-card p { font-size: 13px; font-weight: 400; opacity: 1; margin-top: 6px; line-height: 1.5; text-shadow: 0 1px 4px rgba(0,0,0,0.9); }
 .place-card .badge {
 position: absolute;
 top: 16px; left: 16px;
@@ -269,8 +270,9 @@ background: var(–terracotta);
 font-size: 10px;
 letter-spacing: 2px;
 text-transform: uppercase;
-padding: 4px 10px;
-font-weight: 500;
+padding: 6px 14px;
+font-weight: 700;
+box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 /* SLIDE 5 — BEER */
@@ -351,15 +353,15 @@ position: relative;
 overflow: hidden;
 }
 .nature-card:first-child { grid-row: span 2; }
-.nature-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; filter: brightness(0.65); }
+.nature-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; filter: brightness(0.5); }
 .nature-card:hover img { transform: scale(1.04); filter: brightness(0.85); }
 .nature-card .info {
 position: absolute; bottom: 0; left: 0; right: 0;
-padding: 20px;
-background: linear-gradient(to top, rgba(15,25,35,0.9), transparent);
+padding: 24px 20px;
+background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
 }
-.nature-card h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; }
-.nature-card p { font-size: 11px; opacity: 0.6; margin-top: 2px; }
+.nature-card h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 24px; text-shadow: 0 2px 6px rgba(0,0,0,0.8); }
+.nature-card p { font-size: 12px; opacity: 0.9; margin-top: 4px; font-weight: 400; text-shadow: 0 1px 4px rgba(0,0,0,0.8); }
 
 /* SLIDE 8 — PRACTICAL */
 .slide-8 { background: var(–terracotta); flex-direction: column; text-align: center; }
@@ -526,8 +528,10 @@ transition: opacity 0.7s ease, transform 0.7s ease;
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
-    font-weight: 500;
+    color: white;
+    font-weight: 700;
+    background: rgba(0,0,0,0.6);
+    padding: 4px 8px;
   }
   /* Spiderman gif badge */
   .spider-gif {
@@ -607,7 +611,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
   <h2 class="reveal">But there's<br>more than<br>just Prague.</h2>
   <div class="places-grid reveal">
     <div class="place-card">
-      <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=800&q=80" alt="Český Krumlov">
+      <img src="images/IMG_9025.jpeg" alt="Český Krumlov">
       <div class="overlay">
         <div class="badge">UNESCO</div>
         <h3>Český Krumlov</h3>
@@ -615,7 +619,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
       </div>
     </div>
     <div class="place-card">
-      <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80" alt="Kutná Hora">
+      <img src="images/IMG_9028.jpeg" alt="Kutná Hora">
       <div class="overlay">
         <div class="badge">💀 Unique</div>
         <h3>Kutná Hora</h3>
@@ -623,7 +627,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
       </div>
     </div>
     <div class="place-card">
-      <img src="https://images.unsplash.com/photo-1555990793-da11153b2473?w=800&q=80" alt="Olomouc">
+      <img src="images/IMG_9029.jpeg" alt="Olomouc">
       <div class="overlay">
         <div class="badge">Underrated</div>
         <h3>Olomouc</h3>
@@ -631,7 +635,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
       </div>
     </div>
     <div class="place-card">
-      <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=800&q=80" alt="Karlovy Vary">
+      <img src="images/IMG_9030.webp" alt="Karlovy Vary">
       <div class="overlay">
         <div class="badge">🎬 Film Festival</div>
         <h3>Karlovy Vary</h3>
@@ -944,12 +948,12 @@ transition: opacity 0.7s ease, transform 0.7s ease;
 <section class="slide slide-10" id="slide-9">
   <div class="mosaic">
     <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=600&q=70" alt="Prague"></div>
-    <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=600&q=70" alt="Krumlov"></div>
+    <div class="mosaic-cell"><img src="images/IMG_9025.jpeg" alt="Krumlov"></div>
     <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=70" alt="Nature"></div>
     <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=600&q=70" alt="Beer"></div>
     <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=70" alt="Food"></div>
     <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600&q=70" alt="Bones"></div>
-    <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=70" alt="Olomouc"></div>
+    <div class="mosaic-cell"><img src="images/IMG_9029.jpeg" alt="Olomouc"></div>
     <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=600&q=70" alt="Mountains"></div>
   </div>
   <div class="content">
