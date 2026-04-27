@@ -68,7 +68,7 @@ text-align: center;
 .slide-1 .bg-img {
 position: absolute; inset: 0;
 background: url(‘images/IMG_9008.jpeg’) center/cover no-repeat;
-opacity: 0.35;
+opacity: 0.45;
 }
 .slide-1 .tag {
 font-family: ‘DM Sans’, sans-serif;
@@ -90,7 +90,7 @@ letter-spacing: 2px;
 position: relative;
 animation: fadeUp 0.8s 0.2s ease both;
 color: #ffffff;
-text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+text-shadow: 0 2px 30px rgba(0,0,0,1), 0 0 60px rgba(0,0,0,0.9);
 }
 .slide-1 h1 span { color: var(–terracotta); }
 .slide-1 .subtitle {
@@ -315,19 +315,8 @@ font-family: ‘Playfair Display’, serif;
 
 /* SLIDE 6 — FOOD */
 .slide-6 { background: var(–cream); color: var(–navy); }
-.slide-6 .img-half {
-width: 45%;
-height: 100vh;
-background: url(‘images/IMG_9039.jpeg’) center/cover no-repeat;
-flex-shrink: 0;
-position: relative;
-}
-.slide-6 .img-half::after {
-content: ‘’;
-position: absolute; inset: 0;
-background: linear-gradient(to left, transparent 60%, var(–cream));
-}
-.slide-6 .text-half { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 60px; }
+.slide-6 .img-half { display: none; }
+.slide-6 .text-half { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 60px 120px; max-width: 900px; margin: 0 auto; }
 .slide-6 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(–terracotta); margin-bottom: 20px; font-weight: 500; }
 .slide-6 h2 { font-family: ‘Bebas Neue’, sans-serif; font-size: clamp(44px, 5vw, 72px); line-height: 0.95; margin-bottom: 36px; }
 .food-item { padding: 18px 0; border-bottom: 1px solid rgba(15,25,35,0.1); }
@@ -687,7 +676,6 @@ transition: opacity 0.7s ease, transform 0.7s ease;
 <!-- SLIDE 5 — FOOD -->
 
 <section class="slide slide-6" id="slide-5" style="flex-direction:row;padding:0;">
-  <div class="img-half" style="background-image: url('images/IMG_9006.jpeg');"></div>
   <div class="text-half">
     <div class="slide-label reveal">Slide 4</div>
     <div class="rule reveal"></div>
@@ -697,7 +685,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
         <h4>🥩 Svíčková</h4>
         <p>Beef in creamy sauce with bread dumplings and cranberry. Tourists order it by pointing at the menu. In London this costs €35. Here it costs €6.</p>
       </div>
-      <img src="images/IMG_9039.jpeg" style="height:90px; width:90px; object-fit:cover; flex-shrink:0; border-radius:4px;">
+      <img src="images/IMG_9039.jpeg" style="height:100px; width:100px; object-fit:cover; flex-shrink:0; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
     </div>
     <div class="food-item reveal">
       <h4>🧀 Smažený sýr</h4>
@@ -708,7 +696,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
         <h4>🥐 Trdelník — Let's Address This</h4>
         <p>Not originally Czech. Every tourist buys one. Every Czech rolls their eyes. But everyone is happy so it is fine.</p>
       </div>
-      <img src="images/trdelnık.png" style="height:90px; width:90px; object-fit:cover; flex-shrink:0; border-radius:4px;">
+      <img src="images/IMG_9041.jpeg" style="height:100px; width:100px; object-fit:cover; flex-shrink:0; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
     </div>
     <div class="price-tag reveal">
       Full meal + beer: <strong>under €8</strong> — tourists always think there is a mistake on the menu 🤯
@@ -830,26 +818,38 @@ transition: opacity 0.7s ease, transform 0.7s ease;
   <h2 class="reveal" style="font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,5.5vw,76px); line-height:0.95; margin-bottom:40px;">
     One Country.<br>Every Style<br>of Architecture.
   </h2>
-  <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:2px; width:100%; max-width:1100px;" class="reveal">
-    <div style="background:#0f1923; color:#f5f0e8; padding:36px 28px;">
-      <span style="font-family:'Bebas Neue',sans-serif; font-size:42px; color:#d4a843; display:block; margin-bottom:12px;">GOTHIC</span>
-      <p style="font-size:13px; font-weight:300; line-height:1.6; opacity:0.8;">St. Vitus Cathedral took <strong>600 years</strong> to finish. Started in 1344. Finished in 1929. Czechs are patient builders.</p>
-      <span style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#c8553d; margin-top:16px; display:block;">Praha · Kutná Hora</span>
+  <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:2px; width:100%; max-width:1100px; height:380px;" class="reveal">
+    <div style="position:relative; overflow:hidden;">
+      <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&q=80" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,transparent 60%);">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:#d4a843;display:block;">GOTHIC</span>
+        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:6px;line-height:1.5;">St. Vitus Cathedral took <strong>600 years</strong> to finish. Started 1344. Finished 1929. Czechs are patient.</p>
+        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c8553d;margin-top:10px;display:block;">Praha · Kutná Hora</span>
+      </div>
     </div>
-    <div style="background:#1a2a1a; color:#f5f0e8; padding:36px 28px;">
-      <span style="font-family:'Bebas Neue',sans-serif; font-size:42px; color:#7a9e7e; display:block; margin-bottom:12px;">BAROQUE</span>
-      <p style="font-size:13px; font-weight:300; line-height:1.6; opacity:0.8;">After 1620, the Habsburgs redecorated the whole country in baroque. Over-the-top? Yes. Beautiful? Absolutely.</p>
-      <span style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#7a9e7e; margin-top:16px; display:block;">Olomouc · Kroměříž</span>
+    <div style="position:relative; overflow:hidden;">
+      <img src="https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,transparent 60%);">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:#7a9e7e;display:block;">BAROQUE</span>
+        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:6px;line-height:1.5;">After 1620, the Habsburgs redecorated the whole country. Over-the-top? Yes. Beautiful? Absolutely.</p>
+        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#7a9e7e;margin-top:10px;display:block;">Olomouc · Kroměříž</span>
+      </div>
     </div>
-    <div style="background:#2a1a0f; color:#f5f0e8; padding:36px 28px;">
-      <span style="font-family:'Bebas Neue',sans-serif; font-size:42px; color:#c8553d; display:block; margin-bottom:12px;">ART NOUVEAU</span>
-      <p style="font-size:13px; font-weight:300; line-height:1.6; opacity:0.8;">Alfons Mucha. Municipal House. The most ornate building in Prague — tourists walk past it confused about where to look first.</p>
-      <span style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#c8553d; margin-top:16px; display:block;">Praha · Obecní dům</span>
+    <div style="position:relative; overflow:hidden;">
+      <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=600&q=80" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,transparent 60%);">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:#c8553d;display:block;">ART NOUVEAU</span>
+        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:6px;line-height:1.5;">Obecní dům in Prague — the most ornate building in the city. Tourists stop and don't know where to look first.</p>
+        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c8553d;margin-top:10px;display:block;">Praha · Obecní dům</span>
+      </div>
     </div>
-    <div style="background:#0f1a2a; color:#f5f0e8; padding:36px 28px;">
-      <span style="font-family:'Bebas Neue',sans-serif; font-size:42px; color:#d4a843; display:block; margin-bottom:12px;">CUBIST</span>
-      <p style="font-size:13px; font-weight:300; line-height:1.6; opacity:0.8;"><strong>Prague is the only city in the world</strong> with cubist architecture. Not Paris. Not New York. Prague. We don't talk about this enough.</p>
-      <span style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#d4a843; margin-top:16px; display:block;">Praha · Vyšehrad area</span>
+    <div style="position:relative; overflow:hidden;">
+      <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=600&q=80" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,transparent 60%);">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:#d4a843;display:block;">CUBIST</span>
+        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:6px;line-height:1.5;"><strong>Prague is the only city in the world</strong> with cubist architecture. Not Paris. Not New York.</p>
+        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#d4a843;margin-top:10px;display:block;">Praha · Vyšehrad</span>
+      </div>
     </div>
   </div>
   <p class="reveal" style="margin-top:32px; font-family:'Playfair Display',serif; font-style:italic; font-size:17px; opacity:0.5; color:#0f1923;">"Most European cities have one architectural style. Prague has seven. And they're all on the same street."</p>
@@ -863,39 +863,19 @@ transition: opacity 0.7s ease, transform 0.7s ease;
   <h2 class="reveal" style="font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,5.5vw,76px); line-height:0.95; margin-bottom:44px;">
     People You Know<br>Were Actually<br>Czech.
   </h2>
-  <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:16px; width:100%; max-width:1050px;" class="reveal">
-    <div style="border:1px solid rgba(245,240,232,0.12); padding:36px 28px; transition:background 0.3s;" onmouseover="this.style.background='rgba(245,240,232,0.05)'" onmouseout="this.style.background='transparent'">
-      <span style="font-size:36px; display:block; margin-bottom:16px;">✍️</span>
-      <h3 style="font-family:'Bebas Neue',sans-serif; font-size:28px; color:#d4a843; letter-spacing:1px;">Franz Kafka</h3>
-      <p style="font-size:13px; font-weight:300; line-height:1.6; opacity:0.75; margin-top:8px;">Born in Prague. Wrote in German. Never left. His novels are confusing and brilliant. Tourists visit his museum and leave even more confused. That feels right.</p>
-    </div>
-    <div style="border:1px solid rgba(245,240,232,0.12); padding:36px 28px; transition:background 0.3s;" onmouseover="this.style.background='rgba(245,240,232,0.05)'" onmouseout="this.style.background='transparent'">
-      <span style="font-size:36px; display:block; margin-bottom:16px;">🎨</span>
-      <h3 style="font-family:'Bebas Neue',sans-serif; font-size:28px; color:#c8553d; letter-spacing:1px;">Alfons Mucha</h3>
-      <p style="font-size:13px; font-weight:300; line-height:1.6; opacity:0.75; margin-top:8px;">The face of Art Nouveau. His posters are in every design textbook. He decorated the Paris Opera. Then came home and painted a 20-canvas epic about Czech history. Casual.</p>
-    </div>
-    <div style="border:1px solid rgba(245,240,232,0.12); padding:36px 28px; transition:background 0.3s;" onmouseover="this.style.background='rgba(245,240,232,0.05)'" onmouseout="this.style.background='transparent'">
-      <span style="font-size:36px; display:block; margin-bottom:16px;">🎬</span>
-      <h3 style="font-family:'Bebas Neue',sans-serif; font-size:28px; color:#7a9e7e; letter-spacing:1px;">Miloš Forman</h3>
-      <p style="font-size:13px; font-weight:300; line-height:1.6; opacity:0.75; margin-top:8px;">Czech director. Won 2 Academy Awards. One Flew Over the Cuckoo's Nest. Amadeus. Both filmed partly in Czechia. When he needed a Mozart setting, he came home.</p>
-    </div>
-    <div style="border:1px solid rgba(245,240,232,0.12); padding:36px 28px; transition:background 0.3s;" onmouseover="this.style.background='rgba(245,240,232,0.05)'" onmouseout="this.style.background='transparent'">
-      <span style="font-size:36px; display:block; margin-bottom:16px;">🎵</span>
-      <h3 style="font-family:'Bebas Neue',sans-serif; font-size:28px; color:#d4a843; letter-spacing:1px;">Antonín Dvořák</h3>
-      <p style="font-size:13px; font-weight:300; line-height:1.6; opacity:0.75; margin-top:8px;">Composed the New World Symphony — in New York, homesick for Bohemia. America's most loved symphony was written by a Czech man crying about Czech food.</p>
-    </div>
-    <div style="border:1px solid rgba(245,240,232,0.12); padding:36px 28px; transition:background 0.3s;" onmouseover="this.style.background='rgba(245,240,232,0.05)'" onmouseout="this.style.background='transparent'">
-      <span style="font-size:36px; display:block; margin-bottom:16px;">🧪</span>
-      <h3 style="font-family:'Bebas Neue',sans-serif; font-size:28px; color:#c8553d; letter-spacing:1px;">Gregor Mendel</h3>
-      <p style="font-size:13px; font-weight:300; line-height:1.6; opacity:0.75; margin-top:8px;">Founded modern genetics. Spent his life growing peas in a monastery in Brno. Every biology textbook in the world has his name in it. He just wanted nice peas.</p>
-    </div>
-    <div style="border:1px solid rgba(245,240,232,0.12); padding:36px 28px; transition:background 0.3s;" onmouseover="this.style.background='rgba(245,240,232,0.05)'" onmouseout="this.style.background='transparent'">
-      <span style="font-size:36px; display:block; margin-bottom:16px;">👟</span>
-      <h3 style="font-family:'Bebas Neue',sans-serif; font-size:28px; color:#7a9e7e; letter-spacing:1px;">Tomáš Baťa</h3>
-      <p style="font-size:13px; font-weight:300; line-height:1.6; opacity:0.75; margin-top:8px;">Built the world's largest shoe empire from a town called Zlín. Invented modern factory towns. Baťa stores still exist on 5 continents. Started with one shop in Moravia.</p>
+  <div style="display:flex; justify-content:center; align-items:center; width:100%; max-width:800px;" class="reveal">
+    <div style="display:flex; gap:48px; align-items:center; background:rgba(245,240,232,0.05); border:1px solid rgba(245,240,232,0.12); padding:52px 60px; max-width:700px; width:100%;">
+      <div style="font-size:80px; flex-shrink:0;">🎨</div>
+      <div>
+        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#c8553d;letter-spacing:2px;">Alfons Mucha</h3>
+        <p style="font-size:15px;font-weight:300;line-height:1.7;opacity:0.85;margin-top:12px;">The face of Art Nouveau. His decorative posters are in every design textbook in the world. He decorated the Paris Opera. Then came home and spent 18 years painting the <em>Slav Epic</em> — 20 monumental canvases about the history of Slavic peoples. Just a casual side project.</p>
+        <p style="font-size:13px;margin-top:16px;color:#d4a843;font-weight:500;">Born: Ivančice, Moravia · 1860 — 1939</p>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- SLIDE NEW C</section>
 
 <!-- SLIDE NEW C — TOURIST STATS -->
 
