@@ -956,47 +956,66 @@ display: block;
 
 <!-- SLIDE NEW A — ARCHITECTURE DEEP DIVE -->
 
-<section class="slide slide-9" id="slide-arch" style="background:#f5f0e8; color:#0f1923;">
+<section class="slide slide-9" id="slide-arch" style="background:#f5f0e8; color:#0f1923; flex-direction:column; padding:50px 70px; align-items:flex-start; justify-content:center;">
   <div class="slide-label reveal" style="color:#c8553d;">Slide 8 — Architecture</div>
-  <div class="rule reveal"></div>
-  <h2 class="reveal" style="font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,5.5vw,76px); line-height:0.95; margin-bottom:40px;">
-    One Country.<br>Every Style<br>of Architecture.
+  <div class="rule reveal" style="background:#c8553d;"></div>
+  <h2 class="reveal" style="font-family:'Bebas Neue',sans-serif; font-size:clamp(36px,5vw,68px); line-height:0.95; color:#0f1923; margin-bottom:32px;">
+    One Country.<br>Every Style of Architecture.
   </h2>
-  <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:2px; width:100%; max-width:1100px; height:380px;" class="reveal">
-    <div style="position:relative; overflow:hidden;">
-      <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&q=80" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
-      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,transparent 60%);">
-        <span style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:#d4a843;display:block;">GOTHIC</span>
-        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:6px;line-height:1.5;">St. Vitus Cathedral took <strong>600 years</strong> to finish. Started 1344. Finished 1929. Czechs are patient.</p>
-        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c8553d;margin-top:10px;display:block;">Praha · Kutná Hora</span>
+  <div class="reveal" style="display:flex; gap:10px; width:100%; max-width:1100px; height:400px;">
+
+```
+<!-- GOTHIC -->
+<div style="flex:1; position:relative; overflow:hidden; border-radius:6px;">
+  <img src="images/IMG_9054.webp" style="width:100%;height:100%;object-fit:cover;">
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#d4a843;display:block;letter-spacing:1px;">GOTHIC</span>
+    <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;">St. Vitus Cathedral — took <strong>600 years</strong> to finish. Started 1344, finished 1929.</p>
+    <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c8553d;margin-top:8px;display:block;">Praha · Kutná Hora</span>
+  </div>
+</div>
+
+<!-- BAROQUE -->
+<div style="flex:1; position:relative; overflow:hidden; border-radius:6px;">
+  <img src="images/IMG_9061.jpeg" style="width:100%;height:100%;object-fit:cover;">
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#7a9e7e;display:block;letter-spacing:1px;">BAROQUE</span>
+    <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;">St. Nicholas Church — the Habsburgs redecorated the whole country. Over-the-top? Yes. Beautiful? Absolutely.</p>
+    <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#7a9e7e;margin-top:8px;display:block;">Praha · Olomouc</span>
+  </div>
+</div>
+
+<!-- ART NOUVEAU — FLIP CARD -->
+<div class="flip-card" onclick="this.classList.toggle('flipped')" style="flex:1; border-radius:6px; overflow:hidden;">
+  <div class="flip-card-inner" style="height:100%;">
+    <div class="flip-card-front" style="border-radius:6px; overflow:hidden;">
+      <img src="images/IMG_9058.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#c8553d;display:block;letter-spacing:1px;">ART NOUVEAU</span>
+        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;">Obecní dům — the most ornate building in Prague. Tourists stop and don't know where to look first.</p>
+        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;display:block;">↻ tap to see inside</span>
       </div>
     </div>
-    <div style="position:relative; overflow:hidden;">
-      <img src="https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
-      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,transparent 60%);">
-        <span style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:#7a9e7e;display:block;">BAROQUE</span>
-        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:6px;line-height:1.5;">After 1620, the Habsburgs redecorated the whole country. Over-the-top? Yes. Beautiful? Absolutely.</p>
-        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#7a9e7e;margin-top:10px;display:block;">Olomouc · Kroměříž</span>
-      </div>
-    </div>
-    <div style="position:relative; overflow:hidden;">
-      <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=600&q=80" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
-      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,transparent 60%);">
-        <span style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:#c8553d;display:block;">ART NOUVEAU</span>
-        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:6px;line-height:1.5;">Obecní dům in Prague — the most ornate building in the city. Tourists stop and don't know where to look first.</p>
-        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c8553d;margin-top:10px;display:block;">Praha · Obecní dům</span>
-      </div>
-    </div>
-    <div style="position:relative; overflow:hidden;">
-      <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=600&q=80" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
-      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,transparent 60%);">
-        <span style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:#d4a843;display:block;">CUBIST</span>
-        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:6px;line-height:1.5;"><strong>Prague is the only city in the world</strong> with cubist architecture. Not Paris. Not New York.</p>
-        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#d4a843;margin-top:10px;display:block;">Praha · Vyšehrad</span>
-      </div>
+    <div class="flip-card-back" style="border-radius:6px; background:#000;">
+      <img src="images/IMG_9059.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+      <div style="position:absolute;bottom:12px;right:14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);">↻ tap to go back</div>
     </div>
   </div>
-  <p class="reveal" style="margin-top:32px; font-family:'Playfair Display',serif; font-style:italic; font-size:17px; opacity:0.5; color:#0f1923;">"Most European cities have one architectural style. Prague has seven. And they're all on the same street."</p>
+</div>
+
+<!-- CUBIST -->
+<div style="flex:1; position:relative; overflow:hidden; border-radius:6px;">
+  <img src="images/IMG_9060.jpeg" style="width:100%;height:100%;object-fit:cover;">
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#d4a843;display:block;letter-spacing:1px;">CUBIST</span>
+    <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;"><strong>Prague is the only city in the world</strong> with cubist architecture. Not Paris. Not New York.</p>
+    <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#d4a843;margin-top:8px;display:block;">Praha · Vyšehrad</span>
+  </div>
+</div>
+```
+
+  </div>
+  <p class="reveal" style="margin-top:24px; font-family:'Playfair Display',serif; font-style:italic; font-size:16px; color:rgba(15,25,35,0.5);">"Most European cities have one architectural style. Prague has seven. All on the same street."</p>
 </section>
 
 <!-- SLIDE NEW B — FAMOUS CZECHS -->
