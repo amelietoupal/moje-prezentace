@@ -706,46 +706,61 @@ transition: opacity 0.7s ease, transform 0.7s ease;
 
 <!-- SLIDE 6 — NATURE -->
 
-<section class="slide slide-7" id="slide-6">
-  <div class="slide-label reveal">Slide 5</div>
-  <div class="rule reveal"></div>
-  <h2 class="reveal">Yes, We Also<br>Have Nature.<br>Stunning Nature.</h2>
-  <div class="nature-grid reveal">
-    <div class="nature-card">
-      <img src="images/IMG_9044.webp" alt="Bohemian Switzerland">
-      <div class="info">
-        <h3>Bohemian Switzerland</h3>
-        <p>Big sandstone rocks, deep gorges, and misty forests. Narnia was filmed here. Yes, here in Czechia.</p>
-      </div>
-    </div>
-    <div class="nature-card">
-      <img src="images/IMG_9045.jpeg" alt="Moravian Wine">
-      <div class="info">
-        <h3>Moravian Wine Region</h3>
-        <p>Beautiful vineyards and wine cellars in the hills. Moravians say it is the best wine in the world. They might be right.</p>
-      </div>
-    </div>
-    <div class="nature-card">
-      <img src="images/IMG_9046.webp" alt="Šumava">
-      <div class="info">
-        <h3>Šumava</h3>
-        <p>Deep forests, lakes, and real wolves. Tourists are always surprised about the wolves.</p>
-      </div>
-    </div>
-    <div class="nature-card">
-      <img src="images/IMG_9047.jpeg" alt="Krkonoše">
-      <div class="info">
-        <h3>Krkonoše</h3>
-        <p>Mountains for skiing in winter and hiking in summer. Home of the famous Czech legend Krakonoš.</p>
-      </div>
-    </div>
-    <div class="nature-card">
-      <img src="images/IMG_9048.jpeg" alt="Moravian Karst">
-      <div class="info">
-        <h3>Moravian Karst</h3>
-        <p>Huge underground caves that look like something from a movie. Over 1,100 caves in total.</p>
-      </div>
-    </div>
+<section class="slide slide-7" id="slide-6" style="background:#f5f0e8; color:#0f1923; padding:60px 80px;">
+  <div class="slide-label reveal" style="color:#c8553d;">Slide 5</div>
+  <div class="rule reveal" style="background:#c8553d;"></div>
+  <h2 class="reveal" style="font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,5.5vw,76px); line-height:0.95; color:#0f1923; margin-bottom:40px;">
+    Yes, We Also<br>Have Nature.<br>Stunning Nature.
+  </h2>
+  <div class="reveal" style="display:grid; grid-template-columns:1.4fr 1fr 1fr; grid-template-rows:1fr 1fr; gap:12px; width:100%; max-width:1100px; height:420px;">
+
+```
+<!-- Bohemian Switzerland — large left -->
+<div style="grid-row:span 2; position:relative; overflow:hidden; border-radius:4px;">
+  <img src="images/IMG_9044.webp" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 24px;background:linear-gradient(to top,rgba(15,25,35,0.95),transparent);">
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;display:block;">Bohemian Switzerland</span>
+    <span style="font-size:12px;color:rgba(255,255,255,0.75);">Sandstone arches & misty gorges. Narnia was filmed here.</span>
+  </div>
+</div>
+
+<!-- Moravian Wine -->
+<div style="position:relative; overflow:hidden; border-radius:4px;">
+  <img src="images/IMG_9045.jpeg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(15,25,35,0.95),transparent);">
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;display:block;">Moravian Wine Region</span>
+    <span style="font-size:11px;color:rgba(255,255,255,0.75);">Rolling vineyards. Moravians say it's the best wine. They're right.</span>
+  </div>
+</div>
+
+<!-- Šumava -->
+<div style="position:relative; overflow:hidden; border-radius:4px;">
+  <img src="images/IMG_9046.webp" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(15,25,35,0.95),transparent);">
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;display:block;">Šumava</span>
+    <span style="font-size:11px;color:rgba(255,255,255,0.75);">Wild forests, glacial lakes and real wolves.</span>
+  </div>
+</div>
+
+<!-- Krkonoše -->
+<div style="position:relative; overflow:hidden; border-radius:4px;">
+  <img src="images/IMG_9047.jpeg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(15,25,35,0.95),transparent);">
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;display:block;">Krkonoše</span>
+    <span style="font-size:11px;color:rgba(255,255,255,0.75);">Mountains for skiing in winter, hiking in summer.</span>
+  </div>
+</div>
+
+<!-- Moravian Karst -->
+<div style="position:relative; overflow:hidden; border-radius:4px;">
+  <img src="images/IMG_9048.jpeg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(15,25,35,0.95),transparent);">
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;display:block;">Moravian Karst</span>
+    <span style="font-size:11px;color:rgba(255,255,255,0.75);">Over 1,100 caves. Looks like a movie set.</span>
+  </div>
+</div>
+```
+
   </div>
 </section>
 
