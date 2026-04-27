@@ -248,11 +248,11 @@ background: var(–navy);
 }
 .place-card:first-child { grid-row: span 2; }
 .place-card .img-wrap {
-height: 200px;
+height: 220px;
 overflow: hidden;
 flex-shrink: 0;
 }
-.place-card:first-child .img-wrap { height: 100%; min-height: 280px; }
+.place-card:first-child .img-wrap { height: 320px; }
 .place-card img {
 width: 100%; height: 100%;
 object-fit: cover;
@@ -261,13 +261,14 @@ filter: brightness(0.95);
 }
 .place-card:hover img { transform: scale(1.04); filter: brightness(1); }
 .place-card .overlay {
-padding: 18px 20px 22px;
+padding: 16px 20px 22px;
 display: flex;
 flex-direction: column;
-background: var(–navy);
+background: #0f1923;
+border-top: 2px solid var(–terracotta);
 }
-.place-card h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 26px; letter-spacing: 1px; color: var(–cream); margin-top: 4px; }
-.place-card p { font-size: 12px; font-weight: 300; color: rgba(245,240,232,0.75); margin-top: 6px; line-height: 1.5; }
+.place-card h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 26px; letter-spacing: 1px; color: #f5f0e8; margin-top: 6px; }
+.place-card p { font-size: 12px; font-weight: 300; color: rgba(245,240,232,0.8); margin-top: 6px; line-height: 1.5; }
 .place-card .badge {
 display: inline-block;
 align-self: flex-start;
@@ -277,6 +278,7 @@ letter-spacing: 2px;
 text-transform: uppercase;
 padding: 4px 10px;
 font-weight: 700;
+color: white;
 }
 
 /* SLIDE 5 — BEER */
