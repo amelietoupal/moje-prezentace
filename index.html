@@ -201,14 +201,14 @@ margin-bottom: 32px;
 .detail-list { list-style: none; }
 .detail-list li {
 padding: 16px 0;
-border-bottom: 1px solid rgba(255,255,255,0.1);
+border-bottom: 1px solid rgba(255,255,255,0.15);
 font-size: 14px;
 font-weight: 400;
 line-height: 1.6;
 display: flex;
 gap: 16px;
 align-items: flex-start;
-opacity: 1;
+color: #ffffff;
 }
 .detail-list li .icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
 .fun-pill {
@@ -282,7 +282,7 @@ color: white;
 }
 
 /* SLIDE 5 — BEER */
-.slide-5 { background: #1a1208; flex-direction: column; text-align: center; }
+.slide-5 { background: #2d1f0a; flex-direction: column; text-align: center; }
 .slide-5 .bg-img {
 position: absolute; inset: 0;
 background: url(‘https://images.unsplash.com/photo-1608270586620-248524c67de9?w=1600&q=80’) center/cover no-repeat;
@@ -299,13 +299,13 @@ display: block;
 .slide-5 h2 { font-family: ‘Bebas Neue’, sans-serif; font-size: clamp(32px, 5vw, 56px); margin-bottom: 24px; }
 .beer-facts { display: flex; gap: 40px; justify-content: center; margin-top: 40px; flex-wrap: wrap; }
 .beer-fact { text-align: center; }
-.beer-fact .label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(–gold); opacity: 0.7; }
-.beer-fact .val { font-family: ‘Bebas Neue’, sans-serif; font-size: 28px; display: block; margin-top: 4px; }
+.beer-fact .label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #f0c060; opacity: 1; }
+.beer-fact .val { font-family: ‘Bebas Neue’, sans-serif; font-size: 28px; display: block; margin-top: 4px; color: #ffffff; }
 .beer-note {
 margin-top: 40px;
 font-style: italic;
 font-size: 15px;
-color: rgba(245,240,232,0.5);
+color: rgba(255,255,255,0.8);
 font-family: ‘Playfair Display’, serif;
 }
 
@@ -508,7 +508,7 @@ transition: opacity 0.7s ease, transform 0.7s ease;
     justify-content: center;
     padding: 50px 40px 50px 80px;
     flex-shrink: 0;
-    background: #111;
+    background: #0a0f14;
   }
   .prague-imgs {
     flex: 1;
@@ -656,9 +656,12 @@ transition: opacity 0.7s ease, transform 0.7s ease;
 <section class="slide slide-5" id="slide-4">
   <div class="bg-img"></div>
   <div class="content">
-    <span class="beer-stat reveal">🍺</span>
-    <h2 class="reveal">Beer Capital<br>of the World.<br>Officially.</h2>
-    <p class="reveal" style="font-size:15px;opacity:0.6;margin-bottom:8px;">Czechs drink 160 litres of beer per person per year. Tourists come here just for this. <em>We just call it a normal week.</em></p>
+    <div class="reveal" style="display:flex; gap:32px; align-items:center; margin-bottom:24px;">
+      <img src="images/IMG_9036.webp" style="height:160px; object-fit:contain; filter:drop-shadow(0 8px 24px rgba(0,0,0,0.5));">
+      <img src="images/IMG_9037.png" style="height:100px; object-fit:contain; filter:brightness(0) invert(1) opacity(0.9);">
+    </div>
+    <h2 class="reveal" style="color:#ffffff;">Beer Capital<br>of the World.<br>Officially.</h2>
+    <p class="reveal" style="font-size:15px;color:rgba(255,255,255,0.85);margin-bottom:8px;">Czechs drink 160 litres of beer per person per year. Tourists come here just for this. <em>We just call it a normal week.</em></p>
     <div class="beer-facts reveal">
       <div class="beer-fact">
         <span class="label">Pilsner invented in</span>
