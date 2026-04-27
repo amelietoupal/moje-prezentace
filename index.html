@@ -484,6 +484,50 @@ transition: opacity 0.7s ease, transform 0.7s ease;
 .nature-grid { grid-template-columns: 1fr 1fr; height: auto; }
 .slide-10 .mosaic { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Flip card */
+.flip-card {
+perspective: 1000px;
+cursor: pointer;
+}
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+position: absolute;
+inset: 0;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+.flip-card-back {
+transform: rotateY(180deg);
+background: #0f1923;
+}
+.flip-card-back img {
+width: 100%;
+height: 220px;
+object-fit: cover;
+flex-shrink: 0;
+}
+.flip-hint {
+font-size: 9px;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: rgba(245,240,232,0.5);
+margin-top: 8px;
+display: block;
+}
 </style>
 
 <style>
@@ -546,6 +590,50 @@ transition: opacity 0.7s ease, transform 0.7s ease;
     text-transform: uppercase;
     color: var(--terracotta);
     font-weight: 700;
+  }
+
+  /* Flip card */
+  .flip-card {
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+    transform-style: preserve-3d;
+  }
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+    background: #0f1923;
+  }
+  .flip-card-back img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .flip-hint {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.5);
+    margin-top: 8px;
+    display: block;
   }
 </style>
 
@@ -617,12 +705,28 @@ transition: opacity 0.7s ease, transform 0.7s ease;
         <p>Only 13,000 people live here. But 2 million tourists visit every year. It is that beautiful.</p>
       </div>
     </div>
-    <div class="place-card">
-      <div class="img-wrap"><img src="images/IMG_9028.jpeg" alt="Kutná Hora"></div>
-      <div class="overlay">
-        <div class="badge">💀 Unique</div>
-        <h3>Kutná Hora</h3>
-        <p>A church made from 40,000 real human bones. Someone in the 15th century thought this was a great idea. It kind of was.</p>
+    <div class="place-card flip-card" onclick="this.classList.toggle('flipped')" style="height:100%;">
+      <div class="flip-card-inner" style="height:100%;">
+        <!-- FRONT -->
+        <div class="flip-card-front">
+          <div class="img-wrap"><img src="images/IMG_9028.jpeg" alt="Kutná Hora"></div>
+          <div class="overlay">
+            <div class="badge">💀 Unique</div>
+            <h3>Kutná Hora</h3>
+            <p>A church made from 40,000 real human bones. Someone in the 15th century thought this was a great idea. It kind of was.</p>
+            <span class="flip-hint">↻ tap to see inside</span>
+          </div>
+        </div>
+        <!-- BACK -->
+        <div class="flip-card-back">
+          <img src="images/IMG_9052.jpeg" alt="Sedlec Ossuary">
+          <div class="overlay" style="position:relative; flex:1; background:#0f1923; padding:18px 20px 22px;">
+            <div class="badge" style="background:#7a9e7e;">💀 Sedlec Ossuary</div>
+            <h3 style="margin-top:8px;">The Bone Church</h3>
+            <p>40,000 human skeletons arranged into decorations. A chandelier made of every bone in the human body. Built in 1400s. Still standing. Still unsettling.</p>
+            <span class="flip-hint">↻ tap to go back</span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="place-card">
