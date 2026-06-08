@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,542 +8,543 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root {
-–navy: #0f1923;
-–cream: #f5f0e8;
-–terracotta: #c8553d;
-–gold: #d4a843;
-–sage: #7a9e7e;
-–light: #faf8f4;
-}
+  :root {
+    --navy: #0f1923;
+    --cream: #f5f0e8;
+    --terracotta: #c8553d;
+    --gold: #d4a843;
+    --sage: #7a9e7e;
+    --light: #faf8f4;
+  }
 
-html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; }
 
-body {
-font-family: ‘DM Sans’, sans-serif;
-background: var(–navy);
-color: var(–cream);
-overflow-x: hidden;
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--cream);
+    overflow-x: hidden;
+  }
 
-/* NAV DOTS */
-.nav-dots {
-position: fixed;
-right: 24px;
-top: 50%;
-transform: translateY(-50%);
-z-index: 100;
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-.nav-dot {
-width: 8px; height: 8px;
-border-radius: 50%;
-background: rgba(245,240,232,0.3);
-cursor: pointer;
-transition: all 0.3s;
-border: none;
-}
-.nav-dot.active, .nav-dot:hover { background: var(–terracotta); transform: scale(1.4); }
+  /* NAV DOTS */
+  .nav-dots {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(245,240,232,0.3);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+  }
+  .nav-dot.active, .nav-dot:hover { background: var(--terracotta); transform: scale(1.4); }
 
-/* SLIDES */
-.slide {
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-overflow: hidden;
-padding: 60px 80px;
-}
+  /* SLIDES */
+  .slide {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 80px;
+  }
 
-/* SLIDE 1 — HOOK */
-.slide-1 {
-background: var(–navy);
-flex-direction: column;
-text-align: center;
-}
-.slide-1 .bg-img {
-position: absolute; inset: 0;
-background: url(‘images/IMG_9008.jpeg’) center/cover no-repeat;
-opacity: 0.45;
-}
-.slide-1 .tag {
-font-family: ‘DM Sans’, sans-serif;
-font-size: 11px;
-font-weight: 500;
-letter-spacing: 4px;
-text-transform: uppercase;
-color: #ff8870;
-margin-bottom: 28px;
-position: relative;
-animation: fadeUp 0.8s ease both;
-text-shadow: 0 1px 8px rgba(0,0,0,0.9);
-}
-.slide-1 h1 {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: clamp(56px, 9vw, 120px);
-line-height: 0.9;
-letter-spacing: 2px;
-position: relative;
-animation: fadeUp 0.8s 0.2s ease both;
-color: #ffffff;
-text-shadow: 0 2px 30px rgba(0,0,0,1), 0 0 60px rgba(0,0,0,0.9);
-}
-.slide-1 h1 span { color: var(–terracotta); }
-.slide-1 .subtitle {
-font-size: 18px;
-font-weight: 300;
-color: rgba(255,255,255,0.9);
-margin-top: 32px;
-font-style: italic;
-position: relative;
-animation: fadeUp 0.8s 0.4s ease both;
-text-shadow: 0 1px 12px rgba(0,0,0,0.9);
-}
-.slide-1 .scroll-hint {
-position: absolute;
-bottom: 36px;
-left: 50%;
-transform: translateX(-50%);
-font-size: 11px;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: rgba(245,240,232,0.4);
-animation: bounce 2s infinite;
-}
+  /* SLIDE 1 — HOOK */
+  .slide-1 {
+    background: var(--navy);
+    flex-direction: column;
+    text-align: center;
+  }
+  .slide-1 .bg-img {
+    position: absolute; inset: 0;
+    background: url('images/IMG_9008.jpeg') center/cover no-repeat;
+    opacity: 0.45;
+  }
+  .slide-1 .tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ff8870;
+    margin-bottom: 28px;
+    position: relative;
+    animation: fadeUp 0.8s ease both;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.9);
+  }
+  .slide-1 h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 9vw, 120px);
+    line-height: 0.9;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeUp 0.8s 0.2s ease both;
+    color: #ffffff;
+    text-shadow: 0 2px 30px rgba(0,0,0,1), 0 0 60px rgba(0,0,0,0.9);
+  }
+  .slide-1 h1 span { color: var(--terracotta); }
+  .slide-1 .subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    margin-top: 32px;
+    font-style: italic;
+    position: relative;
+    animation: fadeUp 0.8s 0.4s ease both;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.9);
+  }
+  .slide-1 .scroll-hint {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.4);
+    animation: bounce 2s infinite;
+  }
 
-/* SLIDE 2 — WHERE IS CZECHIA */
-.slide-2 { background: var(–cream); color: var(–navy); flex-direction: column; }
-.slide-2 .big-num {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 200px;
-color: rgba(15,25,35,0.06);
-position: absolute;
-top: -20px; right: -20px;
-line-height: 1;
-pointer-events: none;
-}
-.slide-2 .content { position: relative; z-index: 1; max-width: 900px; width: 100%; }
-.slide-2 .slide-label {
-font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
-color: var(–terracotta); margin-bottom: 20px; font-weight: 500;
-}
-.slide-2 h2 {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: clamp(48px, 7vw, 88px);
-line-height: 0.95;
-margin-bottom: 48px;
-}
-.facts-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 2px;
-}
-.fact-card {
-background: var(–navy);
-color: var(–cream);
-padding: 32px 24px;
-transition: transform 0.3s;
-}
-.fact-card:hover { transform: translateY(-4px); }
-.fact-card .num {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 52px;
-color: var(–terracotta);
-line-height: 1;
-display: block;
-}
-.fact-card p { font-size: 13px; font-weight: 300; margin-top: 8px; line-height: 1.5; opacity: 0.8; }
-.quote-block {
-margin-top: 40px;
-border-left: 3px solid var(–terracotta);
-padding-left: 24px;
-font-family: ‘Playfair Display’, serif;
-font-style: italic;
-font-size: 20px;
-color: var(–navy);
-opacity: 0.7;
-}
+  /* SLIDE 2 — WHERE IS CZECHIA */
+  .slide-2 { background: var(--cream); color: var(--navy); flex-direction: column; }
+  .slide-2 .big-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 200px;
+    color: rgba(15,25,35,0.06);
+    position: absolute;
+    top: -20px; right: -20px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .slide-2 .content { position: relative; z-index: 1; max-width: 900px; width: 100%; }
+  .slide-2 .slide-label {
+    font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--terracotta); margin-bottom: 20px; font-weight: 500;
+  }
+  .slide-2 h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.95;
+    margin-bottom: 48px;
+  }
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+  .fact-card {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 32px 24px;
+    transition: transform 0.3s;
+  }
+  .fact-card:hover { transform: translateY(-4px); }
+  .fact-card .num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--terracotta);
+    line-height: 1;
+    display: block;
+  }
+  .fact-card p { font-size: 13px; font-weight: 300; margin-top: 8px; line-height: 1.5; opacity: 0.8; }
+  .quote-block {
+    margin-top: 40px;
+    border-left: 3px solid var(--terracotta);
+    padding-left: 24px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--navy);
+    opacity: 0.7;
+  }
 
-/* SLIDE 3 — PRAGUE */
-.slide-3 {
-background: #111;
-flex-direction: row;
-gap: 0;
-padding: 0;
-}
-.slide-3 .img-half {
-width: 55%;
-height: 100vh;
-background: url(‘https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=1000&q=80’) center/cover no-repeat;
-position: relative;
-flex-shrink: 0;
-}
-.slide-3 .img-half::after {
-content: ‘’;
-position: absolute; inset: 0;
-background: linear-gradient(to right, transparent 70%, #111);
-}
-.slide-3 .text-half {
-flex: 1;
-display: flex;
-flex-direction: column;
-justify-content: center;
-padding: 60px 60px 60px 40px;
-}
-.slide-3 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(–gold); margin-bottom: 20px; font-weight: 500; }
-.slide-3 h2 {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: clamp(44px, 5vw, 72px);
-line-height: 0.95;
-margin-bottom: 32px;
-}
-.slide-3 h2 em { font-family: ‘Playfair Display’, serif; font-style: italic; color: var(–gold); }
-.detail-list { list-style: none; }
-.detail-list li {
-padding: 16px 0;
-border-bottom: 1px solid rgba(255,255,255,0.15);
-font-size: 14px;
-font-weight: 400;
-line-height: 1.6;
-display: flex;
-gap: 16px;
-align-items: flex-start;
-color: #ffffff;
-}
-.detail-list li .icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
-.fun-pill {
-display: inline-block;
-background: var(–terracotta);
-color: white;
-font-size: 11px;
-letter-spacing: 2px;
-text-transform: uppercase;
-padding: 6px 14px;
-margin-top: 28px;
-font-weight: 500;
-}
+  /* SLIDE 3 — PRAGUE */
+  .slide-3 {
+    background: #111;
+    flex-direction: row;
+    gap: 0;
+    padding: 0;
+  }
+  .slide-3 .img-half {
+    width: 55%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=1000&q=80') center/cover no-repeat;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .slide-3 .img-half::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, transparent 70%, #111);
+  }
+  .slide-3 .text-half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 60px 60px 40px;
+  }
+  .slide-3 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; font-weight: 500; }
+  .slide-3 h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(44px, 5vw, 72px);
+    line-height: 0.95;
+    margin-bottom: 32px;
+  }
+  .slide-3 h2 em { font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); }
+  .detail-list { list-style: none; }
+  .detail-list li {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    color: #ffffff;
+  }
+  .detail-list li .icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+  .fun-pill {
+    display: inline-block;
+    background: var(--terracotta);
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    margin-top: 28px;
+    font-weight: 500;
+  }
 
-/* SLIDE 4 — BEYOND PRAGUE */
-.slide-4 { background: var(–navy); flex-direction: column; }
-.slide-4 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(–sage); margin-bottom: 16px; font-weight: 500; }
-.slide-4 h2 {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: clamp(44px, 6vw, 80px);
-margin-bottom: 48px;
-line-height: 0.95;
-}
-.places-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 16px;
-width: 100%;
-max-width: 1100px;
-}
-.place-card {
-overflow: hidden;
-cursor: pointer;
-display: flex;
-flex-direction: column;
-background: var(–navy);
-}
-.place-card:first-child { grid-row: span 2; }
-.place-card .img-wrap {
-height: 220px;
-overflow: hidden;
-flex-shrink: 0;
-}
-.place-card:first-child .img-wrap { height: 320px; }
-.place-card img {
-width: 100%; height: 100%;
-object-fit: cover;
-transition: transform 0.6s ease;
-filter: brightness(0.95);
-}
-.place-card:hover img { transform: scale(1.04); filter: brightness(1); }
-.place-card .overlay {
-padding: 16px 20px 22px;
-display: flex;
-flex-direction: column;
-background: #0f1923;
-border-top: 2px solid var(–terracotta);
-}
-.place-card h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 26px; letter-spacing: 1px; color: #f5f0e8; margin-top: 6px; }
-.place-card p { font-size: 12px; font-weight: 300; color: rgba(245,240,232,0.8); margin-top: 6px; line-height: 1.5; }
-.place-card .badge {
-display: inline-block;
-align-self: flex-start;
-background: var(–terracotta);
-font-size: 9px;
-letter-spacing: 2px;
-text-transform: uppercase;
-padding: 4px 10px;
-font-weight: 700;
-color: white;
-}
+  /* SLIDE 4 — BEYOND PRAGUE */
+  .slide-4 { background: var(--navy); flex-direction: column; }
+  .slide-4 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; font-weight: 500; }
+  .slide-4 h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(44px, 6vw, 80px);
+    margin-bottom: 48px;
+    line-height: 0.95;
+  }
+  .places-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+    max-width: 1100px;
+  }
+  .place-card {
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    background: var(--navy);
+  }
+  .place-card:first-child { grid-row: span 2; }
+  .place-card .img-wrap {
+    height: 220px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .place-card:first-child .img-wrap { height: 320px; }
+  .place-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: brightness(0.95);
+  }
+  .place-card:hover img { transform: scale(1.04); filter: brightness(1); }
+  .place-card .overlay {
+    padding: 16px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    background: #0f1923;
+    border-top: 2px solid var(--terracotta);
+  }
+  .place-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 1px; color: #f5f0e8; margin-top: 6px; }
+  .place-card p { font-size: 12px; font-weight: 300; color: rgba(245,240,232,0.8); margin-top: 6px; line-height: 1.5; }
+  .place-card .badge {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--terracotta);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-weight: 700;
+    color: white;
+  }
 
-/* SLIDE 5 — BEER */
-.slide-5 { background: #2d1f0a; flex-direction: column; text-align: center; }
-.slide-5 .bg-img {
-position: absolute; inset: 0;
-background: url(‘https://images.unsplash.com/photo-1608270586620-248524c67de9?w=1600&q=80’) center/cover no-repeat;
-opacity: 0.15;
-}
-.slide-5 .content { position: relative; z-index: 1; max-width: 800px; }
-.beer-stat {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: clamp(100px, 18vw, 200px);
-line-height: 0.85;
-color: var(–gold);
-display: block;
-}
-.slide-5 h2 { font-family: ‘Bebas Neue’, sans-serif; font-size: clamp(32px, 5vw, 56px); margin-bottom: 24px; }
-.beer-facts { display: flex; gap: 40px; justify-content: center; margin-top: 40px; flex-wrap: wrap; }
-.beer-fact { text-align: center; }
-.beer-fact .label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #f0c060; opacity: 1; }
-.beer-fact .val { font-family: ‘Bebas Neue’, sans-serif; font-size: 28px; display: block; margin-top: 4px; color: #ffffff; }
-.beer-note {
-margin-top: 40px;
-font-style: italic;
-font-size: 15px;
-color: rgba(255,255,255,0.8);
-font-family: ‘Playfair Display’, serif;
-}
+  /* SLIDE 5 — BEER */
+  .slide-5 { background: #2d1f0a; flex-direction: column; text-align: center; }
+  .slide-5 .bg-img {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1608270586620-248524c67de9?w=1600&q=80') center/cover no-repeat;
+    opacity: 0.15;
+  }
+  .slide-5 .content { position: relative; z-index: 1; max-width: 800px; }
+  .beer-stat {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(100px, 18vw, 200px);
+    line-height: 0.85;
+    color: var(--gold);
+    display: block;
+  }
+  .slide-5 h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 5vw, 56px); margin-bottom: 24px; }
+  .beer-facts { display: flex; gap: 40px; justify-content: center; margin-top: 40px; flex-wrap: wrap; }
+  .beer-fact { text-align: center; }
+  .beer-fact .label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #f0c060; opacity: 1; }
+  .beer-fact .val { font-family: 'Bebas Neue', sans-serif; font-size: 28px; display: block; margin-top: 4px; color: #ffffff; }
+  .beer-note {
+    margin-top: 40px;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    font-family: 'Playfair Display', serif;
+  }
 
-/* SLIDE 6 — FOOD */
-.slide-6 { background: var(–cream); color: var(–navy); }
-.slide-6 .img-half { display: none; }
-.slide-6 .text-half { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 60px 120px; max-width: 900px; margin: 0 auto; }
-.slide-6 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(–terracotta); margin-bottom: 20px; font-weight: 500; }
-.slide-6 h2 { font-family: ‘Bebas Neue’, sans-serif; font-size: clamp(44px, 5vw, 72px); line-height: 0.95; margin-bottom: 36px; }
-.food-item { padding: 18px 0; border-bottom: 1px solid rgba(15,25,35,0.1); }
-.food-item h4 { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; letter-spacing: 1px; }
-.food-item p { font-size: 13px; font-weight: 300; margin-top: 4px; opacity: 0.7; line-height: 1.5; }
-.price-tag {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-background: var(–navy);
-color: var(–cream);
-padding: 12px 20px;
-margin-top: 32px;
-font-size: 13px;
-}
-.price-tag strong { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; color: var(–sage); }
+  /* SLIDE 6 — FOOD */
+  .slide-6 { background: var(--cream); color: var(--navy); }
+  .slide-6 .img-half { display: none; }
+  .slide-6 .text-half { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 60px 120px; max-width: 900px; margin: 0 auto; }
+  .slide-6 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--terracotta); margin-bottom: 20px; font-weight: 500; }
+  .slide-6 h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 5vw, 72px); line-height: 0.95; margin-bottom: 36px; }
+  .food-item { padding: 18px 0; border-bottom: 1px solid rgba(15,25,35,0.1); }
+  .food-item h4 { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; }
+  .food-item p { font-size: 13px; font-weight: 300; margin-top: 4px; opacity: 0.7; line-height: 1.5; }
+  .price-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--navy);
+    color: var(--cream);
+    padding: 12px 20px;
+    margin-top: 32px;
+    font-size: 13px;
+  }
+  .price-tag strong { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--sage); }
 
-/* SLIDE 7 — NATURE */
-.slide-7 { background: var(–navy); flex-direction: column; padding: 60px; }
-.slide-7 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(–sage); margin-bottom: 16px; font-weight: 500; }
-.slide-7 h2 { font-family: ‘Bebas Neue’, sans-serif; font-size: clamp(44px, 6vw, 80px); margin-bottom: 40px; line-height: 0.95; }
-.nature-grid {
-display: grid;
-grid-template-columns: 1.6fr 1fr 1fr;
-grid-template-rows: 1fr 1fr;
-gap: 12px;
-width: 100%;
-max-width: 1100px;
-height: 420px;
-}
-.nature-card {
-position: relative;
-overflow: hidden;
-}
-.nature-card:first-child { grid-row: span 2; }
-.nature-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; filter: brightness(0.5); }
-.nature-card:hover img { transform: scale(1.04); filter: brightness(0.85); }
-.nature-card .info {
-position: absolute; bottom: 0; left: 0; right: 0;
-padding: 24px 20px;
-background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
-}
-.nature-card h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 24px; text-shadow: 0 2px 6px rgba(0,0,0,0.8); }
-.nature-card p { font-size: 12px; opacity: 0.9; margin-top: 4px; font-weight: 400; text-shadow: 0 1px 4px rgba(0,0,0,0.8); }
+  /* SLIDE 7 — NATURE */
+  .slide-7 { background: var(--navy); flex-direction: column; padding: 60px; }
+  .slide-7 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; font-weight: 500; }
+  .slide-7 h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 6vw, 80px); margin-bottom: 40px; line-height: 0.95; }
+  .nature-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 1100px;
+    height: 420px;
+  }
+  .nature-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .nature-card:first-child { grid-row: span 2; }
+  .nature-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; filter: brightness(0.5); }
+  .nature-card:hover img { transform: scale(1.04); filter: brightness(0.85); }
+  .nature-card .info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 24px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
+  }
+  .nature-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 24px; text-shadow: 0 2px 6px rgba(0,0,0,0.8); }
+  .nature-card p { font-size: 12px; opacity: 0.9; margin-top: 4px; font-weight: 400; text-shadow: 0 1px 4px rgba(0,0,0,0.8); }
 
-/* SLIDE 8 — PRACTICAL */
-.slide-8 { background: var(–terracotta); flex-direction: column; text-align: center; }
-.slide-8 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 16px; font-weight: 500; }
-.slide-8 h2 { font-family: ‘Bebas Neue’, sans-serif; font-size: clamp(44px, 6vw, 80px); line-height: 0.95; color: white; margin-bottom: 60px; }
-.pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; width: 100%; max-width: 1000px; }
-.pillar { background: rgba(255,255,255,0.12); padding: 40px 24px; transition: background 0.3s; }
-.pillar:hover { background: rgba(255,255,255,0.22); }
-.pillar .ico { font-size: 40px; display: block; margin-bottom: 16px; }
-.pillar h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 32px; color: white; letter-spacing: 1px; }
-.pillar p { font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 8px; line-height: 1.5; }
-.pillar .highlight { font-family: ‘Bebas Neue’, sans-serif; font-size: 20px; color: var(–gold); display: block; margin-top: 12px; }
+  /* SLIDE 8 — PRACTICAL */
+  .slide-8 { background: var(--terracotta); flex-direction: column; text-align: center; }
+  .slide-8 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 16px; font-weight: 500; }
+  .slide-8 h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 6vw, 80px); line-height: 0.95; color: white; margin-bottom: 60px; }
+  .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; width: 100%; max-width: 1000px; }
+  .pillar { background: rgba(255,255,255,0.12); padding: 40px 24px; transition: background 0.3s; }
+  .pillar:hover { background: rgba(255,255,255,0.22); }
+  .pillar .ico { font-size: 40px; display: block; margin-bottom: 16px; }
+  .pillar h3 { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: white; letter-spacing: 1px; }
+  .pillar p { font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 8px; line-height: 1.5; }
+  .pillar .highlight { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--gold); display: block; margin-top: 12px; }
 
-/* SLIDE 9 — FUN FACTS */
-.slide-9 { background: var(–cream); color: var(–navy); flex-direction: column; }
-.slide-9 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(–terracotta); margin-bottom: 16px; font-weight: 500; }
-.slide-9 h2 { font-family: ‘Bebas Neue’, sans-serif; font-size: clamp(44px, 6vw, 80px); line-height: 0.95; margin-bottom: 48px; }
-.facts-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; width: 100%; max-width: 1000px; }
-.fact-block { background: var(–navy); color: var(–cream); padding: 48px 36px; position: relative; overflow: hidden; transition: transform 0.3s; }
-.fact-block:hover { transform: translateY(-6px); }
-.fact-block .num-big {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 120px;
-color: rgba(255,255,255,0.04);
-position: absolute;
-top: -20px; right: 16px;
-line-height: 1;
-}
-.fact-block .emoji { font-size: 36px; display: block; margin-bottom: 20px; }
-.fact-block h3 { font-family: ‘Bebas Neue’, sans-serif; font-size: 28px; letter-spacing: 1px; color: var(–gold); margin-bottom: 12px; }
-.fact-block p { font-size: 14px; font-weight: 300; line-height: 1.6; opacity: 0.8; }
+  /* SLIDE 9 — FUN FACTS */
+  .slide-9 { background: var(--cream); color: var(--navy); flex-direction: column; }
+  .slide-9 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--terracotta); margin-bottom: 16px; font-weight: 500; }
+  .slide-9 h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 6vw, 80px); line-height: 0.95; margin-bottom: 48px; }
+  .facts-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; width: 100%; max-width: 1000px; }
+  .fact-block { background: var(--navy); color: var(--cream); padding: 48px 36px; position: relative; overflow: hidden; transition: transform 0.3s; }
+  .fact-block:hover { transform: translateY(-6px); }
+  .fact-block .num-big {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 120px;
+    color: rgba(255,255,255,0.04);
+    position: absolute;
+    top: -20px; right: 16px;
+    line-height: 1;
+  }
+  .fact-block .emoji { font-size: 36px; display: block; margin-bottom: 20px; }
+  .fact-block h3 { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; color: var(--gold); margin-bottom: 12px; }
+  .fact-block p { font-size: 14px; font-weight: 300; line-height: 1.6; opacity: 0.8; }
 
-/* SLIDE 10 — VERDICT */
-.slide-10 { background: var(–navy); flex-direction: column; text-align: center; }
-.slide-10 .mosaic {
-position: absolute; inset: 0;
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(2, 1fr);
-opacity: 0.18;
-pointer-events: none;
-}
-.mosaic-cell { overflow: hidden; }
-.mosaic-cell img { width: 100%; height: 100%; object-fit: cover; }
-.slide-10 .content { position: relative; z-index: 1; max-width: 800px; }
-.slide-10 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(–terracotta); margin-bottom: 24px; font-weight: 500; }
-.slide-10 h2 {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: clamp(56px, 9vw, 110px);
-line-height: 0.9;
-margin-bottom: 32px;
-}
-.slide-10 h2 .yes { color: var(–terracotta); }
-.reasons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px; }
-.reason-tag {
-border: 1px solid rgba(245,240,232,0.2);
-padding: 8px 18px;
-font-size: 12px;
-letter-spacing: 2px;
-text-transform: uppercase;
-font-weight: 500;
-transition: all 0.3s;
-}
-.reason-tag:hover { background: var(–terracotta); border-color: var(–terracotta); }
-.final-q {
-font-family: ‘Playfair Display’, serif;
-font-style: italic;
-font-size: 20px;
-color: rgba(245,240,232,0.5);
-margin-top: 32px;
-}
+  /* SLIDE 10 — VERDICT */
+  .slide-10 { background: var(--navy); flex-direction: column; text-align: center; }
+  .slide-10 .mosaic {
+    position: absolute; inset: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    opacity: 0.18;
+    pointer-events: none;
+  }
+  .mosaic-cell { overflow: hidden; }
+  .mosaic-cell img { width: 100%; height: 100%; object-fit: cover; }
+  .slide-10 .content { position: relative; z-index: 1; max-width: 800px; }
+  .slide-10 .slide-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--terracotta); margin-bottom: 24px; font-weight: 500; }
+  .slide-10 h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 9vw, 110px);
+    line-height: 0.9;
+    margin-bottom: 32px;
+  }
+  .slide-10 h2 .yes { color: var(--terracotta); }
+  .reasons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px; }
+  .reason-tag {
+    border: 1px solid rgba(245,240,232,0.2);
+    padding: 8px 18px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  .reason-tag:hover { background: var(--terracotta); border-color: var(--terracotta); }
+  .final-q {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: rgba(245,240,232,0.5);
+    margin-top: 32px;
+  }
 
-/* PROGRESS BAR */
-.progress-bar {
-position: fixed;
-top: 0; left: 0;
-height: 3px;
-background: var(–terracotta);
-z-index: 200;
-transition: width 0.3s;
-}
+  /* PROGRESS BAR */
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: var(--terracotta);
+    z-index: 200;
+    transition: width 0.3s;
+  }
 
-/* SLIDE NUMBER */
-.slide-counter {
-position: fixed;
-bottom: 28px; left: 40px;
-font-size: 11px;
-letter-spacing: 3px;
-color: rgba(245,240,232,0.3);
-z-index: 100;
-font-weight: 500;
-}
+  /* SLIDE NUMBER */
+  .slide-counter {
+    position: fixed;
+    bottom: 28px; left: 40px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: rgba(245,240,232,0.3);
+    z-index: 100;
+    font-weight: 500;
+  }
 
-/* ANIMATIONS */
-@keyframes fadeUp {
-from { opacity: 0; transform: translateY(30px); }
-to { opacity: 1; transform: translateY(0); }
-}
-@keyframes bounce {
-0%, 100% { transform: translateX(-50%) translateY(0); }
-50% { transform: translateX(-50%) translateY(8px); }
-}
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
 
-.reveal {
-opacity: 0;
-transform: translateY(24px);
-transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible { opacity: 1; transform: none; }
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
 
-/* SECTION DIVIDERS — decorative line */
-.rule { width: 40px; height: 2px; background: var(–terracotta); margin-bottom: 24px; }
+  /* SECTION DIVIDERS — decorative line */
+  .rule { width: 40px; height: 2px; background: var(--terracotta); margin-bottom: 24px; }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-.slide { padding: 40px 32px; }
-.slide-3, .slide-6 { flex-direction: column; }
-.slide-3 .img-half, .slide-6 .img-half { width: 100%; height: 40vh; }
-.facts-grid, .pillars, .facts-row { grid-template-columns: repeat(2, 1fr); }
-.places-grid { grid-template-columns: repeat(2, 1fr); }
-.nature-grid { grid-template-columns: 1fr 1fr; height: auto; }
-.slide-10 .mosaic { grid-template-columns: repeat(2, 1fr); }
-}
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .slide { padding: 40px 32px; }
+    .slide-3, .slide-6 { flex-direction: column; }
+    .slide-3 .img-half, .slide-6 .img-half { width: 100%; height: 40vh; }
+    .facts-grid, .pillars, .facts-row { grid-template-columns: repeat(2, 1fr); }
+    .places-grid { grid-template-columns: repeat(2, 1fr); }
+    .nature-grid { grid-template-columns: 1fr 1fr; height: auto; }
+    .slide-10 .mosaic { grid-template-columns: repeat(2, 1fr); }
+  }
 
-/* Flip card */
-.flip-card {
-perspective: 1000px;
-cursor: pointer;
-}
-.flip-card-inner {
-position: relative;
-width: 100%;
-height: 100%;
-transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
-transform-style: preserve-3d;
-}
-.flip-card.flipped .flip-card-inner {
-transform: rotateY(180deg);
-}
-.flip-card-front,
-.flip-card-back {
-position: absolute;
-inset: 0;
-backface-visibility: hidden;
--webkit-backface-visibility: hidden;
-overflow: hidden;
-display: flex;
-flex-direction: column;
-}
-.flip-card-back {
-transform: rotateY(180deg);
-background: #0f1923;
-}
-.flip-card-back img {
-width: 100%;
-height: 220px;
-object-fit: cover;
-flex-shrink: 0;
-}
-.flip-hint {
-font-size: 9px;
-letter-spacing: 2px;
-text-transform: uppercase;
-color: rgba(245,240,232,0.5);
-margin-top: 8px;
-display: block;
-}
+  /* Flip card */
+  .flip-card {
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+    transform-style: preserve-3d;
+  }
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+    background: #0f1923;
+  }
+  .flip-card-back img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .flip-hint {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.5);
+    margin-top: 8px;
+    display: block;
+  }
 
-#slide-2 h2 {
-color: #ffffff !important;
-text-shadow: 0 2px 24px rgba(0,0,0,1) !important;
-}
-#slide-2 .slide-label,
-#slide-2 .detail-list li,
-#slide-2 .fun-pill {
-color: #ffffff !important;
-}
-#slide-2 .detail-list li {
-border-bottom-color: rgba(255,255,255,0.15) !important;
-}
-#slide-2 strong {
-color: #ffffff !important;
-}
+  #slide-2 h2 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 24px rgba(0,0,0,1) !important;
+  }
+  #slide-2 .slide-label,
+  #slide-2 .detail-list li,
+  #slide-2 .fun-pill {
+    color: #ffffff !important;
+  }
+  #slide-2 .detail-list li {
+    border-bottom-color: rgba(255,255,255,0.15) !important;
+  }
+  #slide-2 strong {
+    color: #ffffff !important;
+  }
 </style>
+
 
 <style>
   /* Slide 2 image grid */
@@ -653,12 +653,12 @@ color: #ffffff !important;
   }
 </style>
 
+
 <div class="progress-bar" id="progress"></div>
 <div class="slide-counter" id="counter">01 / 09</div>
 <nav class="nav-dots" id="navDots"></nav>
 
 <!-- SLIDE 1 — HOOK -->
-
 <section class="slide slide-1" id="slide-1">
   <div class="bg-img" style="background: url('images/IMG_9008.jpeg') center/cover no-repeat;"></div>
   <div class="tag">English Presentation · B2 Level</div>
@@ -668,7 +668,6 @@ color: #ffffff !important;
 </section>
 
 <!-- SLIDE 2 — PRAGUE with image grid -->
-
 <section class="slide" id="slide-2" style="padding:0; background:#111;">
   <div class="prague-layout">
     <div class="prague-text">
@@ -707,7 +706,6 @@ color: #ffffff !important;
 </section>
 
 <!-- SLIDE 3 — BEYOND PRAGUE -->
-
 <section class="slide slide-4" id="slide-3">
   <div class="slide-label reveal">Slide 2</div>
   <div class="rule reveal"></div>
@@ -760,7 +758,6 @@ color: #ffffff !important;
 </section>
 
 <!-- SLIDE 4 — BEER -->
-
 <section class="slide slide-5" id="slide-4">
   <div class="bg-img"></div>
   <div class="content">
@@ -781,7 +778,7 @@ color: #ffffff !important;
       </div>
       <div class="beer-fact">
         <span class="label">Average pub price</span>
-        <span class="val">~40 CZK. Yes really.</span>
+        <span class="val">~50 CZK. Yes really.</span>
       </div>
     </div>
     <p class="beer-note reveal">"In Czech pubs, when your glass is empty, a new beer arrives automatically.<br>To say no, you put a coaster on top. Tourists never work this out."</p>
@@ -789,7 +786,6 @@ color: #ffffff !important;
 </section>
 
 <!-- SLIDE 5 — FOOD -->
-
 <section class="slide slide-6" id="slide-5" style="flex-direction:row;padding:0;">
   <div class="text-half">
     <div class="slide-label reveal">Slide 4</div>
@@ -820,7 +816,6 @@ color: #ffffff !important;
 </section>
 
 <!-- SLIDE 6 — NATURE -->
-
 <section class="slide" id="slide-6" style="background:#f5f0e8; color:#0f1923; padding:50px 70px; flex-direction:column; align-items:flex-start; justify-content:center;">
   <div class="slide-label reveal" style="color:#c8553d;">Slide 5</div>
   <div class="rule reveal" style="background:#c8553d; width:40px; height:2px; margin-bottom:20px;"></div>
@@ -873,7 +868,6 @@ color: #ffffff !important;
 </section>
 
 <!-- SLIDE — NO SEA, NO PROBLEM -->
-
 <section class="slide" id="slide-nosea" style="background:#0f1923; color:#f5f0e8; padding:50px 70px; flex-direction:column; align-items:flex-start; justify-content:center;">
   <div class="slide-label reveal" style="color:#7a9e7e;">Slide 5b</div>
   <div class="rule reveal" style="background:#7a9e7e; width:40px; height:2px; margin-bottom:20px;"></div>
@@ -910,7 +904,6 @@ color: #ffffff !important;
 </section>
 
 <!-- SLIDE 7 — PRACTICAL -->
-
 <section class="slide slide-8" id="slide-7">
   <div class="slide-label reveal">Slide 6</div>
   <h2 class="reveal">The Practical Reasons<br>Tourists Actually<br>Keep Coming Back.</h2>
@@ -943,7 +936,6 @@ color: #ffffff !important;
 </section>
 
 <!-- SLIDE 8 — FUN FACTS -->
-
 <section class="slide slide-9" id="slide-8">
   <div class="slide-label reveal">Slide 7</div>
   <div class="rule reveal"></div>
@@ -970,8 +962,8 @@ color: #ffffff !important;
   </div>
 </section>
 
-<!-- SLIDE NEW A — ARCHITECTURE DEEP DIVE -->
 
+<!-- SLIDE NEW A — ARCHITECTURE DEEP DIVE -->
 <section class="slide slide-9" id="slide-arch" style="background:#f5f0e8; color:#0f1923; flex-direction:column; padding:50px 70px; align-items:flex-start; justify-content:center;">
   <div class="slide-label reveal" style="color:#c8553d;">Slide 8 — Architecture</div>
   <div class="rule reveal" style="background:#c8553d;"></div>
@@ -980,62 +972,59 @@ color: #ffffff !important;
   </h2>
   <div class="reveal" style="display:flex; gap:10px; width:100%; max-width:1100px; height:400px;">
 
-```
-<!-- GOTHIC -->
-<div style="flex:1; position:relative; overflow:hidden; border-radius:6px;">
-  <img src="images/IMG_9054.webp" style="width:100%;height:100%;object-fit:cover;">
-  <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
-    <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#d4a843;display:block;letter-spacing:1px;">GOTHIC</span>
-    <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;">St. Vitus Cathedral — took <strong>600 years</strong> to finish. Started 1344, finished 1929.</p>
-    <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c8553d;margin-top:8px;display:block;">Praha · Kutná Hora</span>
-  </div>
-</div>
-
-<!-- BAROQUE -->
-<div style="flex:1; position:relative; overflow:hidden; border-radius:6px;">
-  <img src="images/IMG_9061.jpeg" style="width:100%;height:100%;object-fit:cover;">
-  <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
-    <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#7a9e7e;display:block;letter-spacing:1px;">BAROQUE</span>
-    <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;">St. Nicholas Church — the Habsburgs redecorated the whole country. Over-the-top? Yes. Beautiful? Absolutely.</p>
-    <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#7a9e7e;margin-top:8px;display:block;">Praha · Olomouc</span>
-  </div>
-</div>
-
-<!-- ART NOUVEAU — FLIP CARD -->
-<div class="flip-card" onclick="this.classList.toggle('flipped')" style="flex:1; border-radius:6px; overflow:hidden;">
-  <div class="flip-card-inner" style="height:100%;">
-    <div class="flip-card-front" style="border-radius:6px; overflow:hidden;">
-      <img src="images/IMG_9058.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+    <!-- GOTHIC -->
+    <div style="flex:1; position:relative; overflow:hidden; border-radius:6px;">
+      <img src="images/IMG_9054.webp" style="width:100%;height:100%;object-fit:cover;">
       <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
-        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#c8553d;display:block;letter-spacing:1px;">ART NOUVEAU</span>
-        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;">Obecní dům — the most ornate building in Prague. Tourists stop and don't know where to look first.</p>
-        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;display:block;">↻ tap to see inside</span>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#d4a843;display:block;letter-spacing:1px;">GOTHIC</span>
+        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;">St. Vitus Cathedral — took <strong>600 years</strong> to finish. Started 1344, finished 1929.</p>
+        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c8553d;margin-top:8px;display:block;">Praha · Kutná Hora</span>
       </div>
     </div>
-    <div class="flip-card-back" style="border-radius:6px; background:#000;">
-      <img src="images/IMG_9059.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
-      <div style="position:absolute;bottom:12px;right:14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);">↻ tap to go back</div>
-    </div>
-  </div>
-</div>
 
-<!-- CUBIST -->
-<div style="flex:1; position:relative; overflow:hidden; border-radius:6px;">
-  <img src="images/IMG_9060.jpeg" style="width:100%;height:100%;object-fit:cover;">
-  <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
-    <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#d4a843;display:block;letter-spacing:1px;">CUBIST</span>
-    <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;"><strong>Prague is the only city in the world</strong> with cubist architecture. Not Paris. Not New York.</p>
-    <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#d4a843;margin-top:8px;display:block;">Praha · Vyšehrad</span>
-  </div>
-</div>
-```
+    <!-- BAROQUE -->
+    <div style="flex:1; position:relative; overflow:hidden; border-radius:6px;">
+      <img src="images/IMG_9061.jpeg" style="width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#7a9e7e;display:block;letter-spacing:1px;">BAROQUE</span>
+        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;">St. Nicholas Church — the Habsburgs redecorated the whole country. Over-the-top? Yes. Beautiful? Absolutely.</p>
+        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#7a9e7e;margin-top:8px;display:block;">Praha · Olomouc</span>
+      </div>
+    </div>
+
+    <!-- ART NOUVEAU — FLIP CARD -->
+    <div class="flip-card" onclick="this.classList.toggle('flipped')" style="flex:1; border-radius:6px; overflow:hidden;">
+      <div class="flip-card-inner" style="height:100%;">
+        <div class="flip-card-front" style="border-radius:6px; overflow:hidden;">
+          <img src="images/IMG_9058.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
+            <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#c8553d;display:block;letter-spacing:1px;">ART NOUVEAU</span>
+            <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;">Obecní dům — the most ornate building in Prague. Tourists stop and don't know where to look first.</p>
+            <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;display:block;">↻ tap to see inside</span>
+          </div>
+        </div>
+        <div class="flip-card-back" style="border-radius:6px; background:#000;">
+          <img src="images/IMG_9059.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+          <div style="position:absolute;bottom:12px;right:14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);">↻ tap to go back</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CUBIST -->
+    <div style="flex:1; position:relative; overflow:hidden; border-radius:6px;">
+      <img src="images/IMG_9060.jpeg" style="width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#d4a843;display:block;letter-spacing:1px;">CUBIST</span>
+        <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;line-height:1.5;"><strong>Prague is the only city in the world</strong> with cubist architecture. Not Paris. Not New York.</p>
+        <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#d4a843;margin-top:8px;display:block;">Praha · Vyšehrad</span>
+      </div>
+    </div>
 
   </div>
   <p class="reveal" style="margin-top:24px; font-family:'Playfair Display',serif; font-style:italic; font-size:16px; color:rgba(15,25,35,0.5);">"Most European cities have one architectural style. Prague has seven. All on the same street."</p>
 </section>
 
 <!-- SLIDE NEW B — FAMOUS CZECHS -->
-
 <section class="slide slide-4" id="slide-famous">
   <div class="slide-label reveal">Slide 9 — Famous Czechs</div>
   <div class="rule reveal"></div>
@@ -1044,33 +1033,30 @@ color: #ffffff !important;
   </h2>
   <div class="reveal" style="display:flex; gap:32px; align-items:flex-start; width:100%; max-width:1100px;">
 
-```
-<!-- Left: Mucha info -->
-<div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:40px; background:rgba(245,240,232,0.05); border:1px solid rgba(245,240,232,0.12); align-self:stretch;">
-  <h3 style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#c8553d;letter-spacing:2px;">Alfons Mucha</h3>
-  <p style="font-size:14px;font-weight:300;line-height:1.7;opacity:0.85;margin-top:12px;">The face of Art Nouveau. His decorative posters are in every design textbook in the world. He decorated the Paris Opera. Then came home and spent 18 years painting the <em>Slav Epic</em> — 20 monumental canvases about the history of Slavic peoples.</p>
-  <p style="font-size:13px;margin-top:16px;color:#d4a843;font-weight:500;">Born: Ivančice, Moravia · 1860 — 1939</p>
-</div>
+    <!-- Left: Mucha info -->
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:40px; background:rgba(245,240,232,0.05); border:1px solid rgba(245,240,232,0.12); align-self:stretch;">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#c8553d;letter-spacing:2px;">Alfons Mucha</h3>
+      <p style="font-size:14px;font-weight:300;line-height:1.7;opacity:0.85;margin-top:12px;">The face of Art Nouveau. His decorative posters are in every design textbook in the world. He decorated the Paris Opera. Then came home and spent 18 years painting the <em>Slav Epic</em> — 20 monumental canvases about the history of Slavic peoples.</p>
+      <p style="font-size:13px;margin-top:16px;color:#d4a843;font-weight:500;">Born: Ivančice, Moravia · 1860 — 1939</p>
+    </div>
 
-<!-- Right: 3 posters -->
-<div style="display:flex; gap:10px; height:420px;">
-  <div style="width:160px; overflow:hidden; border-radius:4px; flex-shrink:0;">
-    <img src="images/IMG_9063.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:top;">
-  </div>
-  <div style="width:200px; overflow:hidden; border-radius:4px; flex-shrink:0;">
-    <img src="images/IMG_9064.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:top;">
-  </div>
-  <div style="width:160px; overflow:hidden; border-radius:4px; flex-shrink:0;">
-    <img src="images/IMG_9066.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:top;">
-  </div>
-</div>
-```
+    <!-- Right: 3 posters -->
+    <div style="display:flex; gap:10px; height:420px;">
+      <div style="width:160px; overflow:hidden; border-radius:4px; flex-shrink:0;">
+        <img src="images/IMG_9063.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+      </div>
+      <div style="width:200px; overflow:hidden; border-radius:4px; flex-shrink:0;">
+        <img src="images/IMG_9064.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+      </div>
+      <div style="width:160px; overflow:hidden; border-radius:4px; flex-shrink:0;">
+        <img src="images/IMG_9066.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+      </div>
+    </div>
 
   </div>
 <!-- SLIDE NEW C</section>
 
 <!-- SLIDE NEW C — TOURIST STATS -->
-
 <section class="slide" id="slide-stats" style="background:#c8553d;">
   <div style="position:relative; z-index:1; max-width:1000px; width:100%; text-align:center;">
     <div class="slide-label reveal" style="color:rgba(255,255,255,0.6);">Slide 10 — By the Numbers</div>
@@ -1105,7 +1091,6 @@ color: #ffffff !important;
 </section>
 
 <!-- SLIDE NEW D — INSIDER TIPS -->
-
 <section class="slide slide-9" id="slide-tips" style="background:#f5f0e8; color:#0f1923;">
   <div class="slide-label reveal" style="color:#c8553d;">Slide 11 — Insider Tips</div>
   <div class="rule reveal" style="background:#c8553d;"></div>
@@ -1134,8 +1119,8 @@ color: #ffffff !important;
   </div>
 </section>
 
-<!-- SLIDE 9 — VERDICT -->
 
+<!-- SLIDE 9 — VERDICT -->
 <section class="slide slide-10" id="slide-9">
   <div class="mosaic">
     <div class="mosaic-cell"><img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=600&q=70" alt="Prague"></div>
@@ -1204,6 +1189,5 @@ color: #ffffff !important;
 
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 </script>
-
 </body>
 </html>
